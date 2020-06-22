@@ -32,6 +32,19 @@ $ sudo dpkg-reconfigure locales
 $ pip3 install --upgrade pip
 ```
 #### Firefox
-```sh
+```bash
 $ sudo apt install firefox
+```
+#### InstaPy
+```bash
+$ pip install instapy
+```
+
+> If you see an error telling you that something can't be uninstalled due to it being part of distutils, simply do  
+`pip install instapy --ignore-installed`
+
+### How to run InstaBots?
+> Run InstaBots scripts without root privileges
+```bash
+$ python3 name_script
 ```
