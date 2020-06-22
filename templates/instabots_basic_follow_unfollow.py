@@ -3,7 +3,7 @@ This template is written by @fctaddia
 What does this quickstart script aim to do?
 - Basic follow/unfollow activity.
 NOTES:
-- I don't want to automate comment and too much likes because I want to do
+- I dont want to automate comment and too much likes because I want to do
 this only for post that I really like the content so at the moment I only
 use the function follow/unfollow.
 - I use two files "quickstart", one for follow and one for unfollow.
@@ -28,7 +28,7 @@ insta_password = ''
 session = InstaPy(username=insta_username, password=insta_password,headless_browser=False)
 
 with smart_run(session):
-    """ Activity flow """
+    # Activity flow
     # general settings
     session.set_relationship_bounds(enabled=True, delimit_by_numbers=True, max_followers=4590, min_followers=45, min_following=77)
 
@@ -37,29 +37,22 @@ with smart_run(session):
 
     # activities
 
-    """ Massive Follow of users followers (I suggest to follow not less than
-    3500/4000 users for better results)...
-    """
+    # Massive Follow of users followers (I suggest to follow not less than 3500/4000 users for better results)
     session.follow_user_followers(['user1', 'user2', 'user3'], amount=100, randomize=False, interact=False)
 
-    """ First step of Unfollow action - Unfollow not follower users...
-    """
+    # First step of Unfollow action - Unfollow not follower users
     session.unfollow_users(amount=500, InstapyFollowed=(True, "nonfollowers"), style="FIFO", unfollow_after=12 * 60 * 60, sleep_delay=601)
 
-    """ Second step of Massive Follow...
-    """
+    # Second step of Massive Follow
     session.follow_user_followers(['user1', 'user2', 'user3'], amount=100, randomize=False, interact=False)
 
-    """ Second step of Unfollow action - Unfollow not follower users...
-    """
+    # Second step of Unfollow action - Unfollow not follower users
     session.unfollow_users(amount=500, InstapyFollowed=(True, "nonfollowers"), style="FIFO", unfollow_after=12 * 60 * 60, sleep_delay=601)
 
-    """ Clean all followed user - Unfollow all users followed by InstaPy...
-    """
+    # Clean all followed user - Unfollow all users followed by InstaPy
     session.unfollow_users(amount=500, InstapyFollowed=(True, "all"), style="FIFO", unfollow_after=24 * 60 * 60, sleep_delay=601)
 
-    """ Joining Engagement Pods...
-    """
+    # Joining Engagement Pods...
     photo_comments = ['Nice shot! @{}',
         'Awesome! @{}',
         'Cool :thumbsup:',
