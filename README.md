@@ -3,6 +3,7 @@
 ## InstaBots
 Do you want to make your instagram page famous? Try to use my bots to do it.
 
+[![GitHub (pre-)release](https://img.shields.io/github/v/release/fctaddia/instabots.svg?color=0f9c98&label=Release&style=flat-square)](./../../releases)
 [![License](https://img.shields.io/github/license/fctaddia/InstaBots?color=0f9c98&label=License)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![InstaPy](https://img.shields.io/badge/Library-InstaPy-0f9c98)](https://github.com/timgrossmann/InstaPy)
 [![Python](https://img.shields.io/badge/Build%20in-Python3-%233266a8)](https://www.python.org/)
